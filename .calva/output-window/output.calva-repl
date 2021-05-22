@@ -1,0 +1,525 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.8.3"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.26.0"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉alura-credit-card-ii.core꞉> 
+; Jack-in done.
+clj꞉alura-credit-card-ii.core꞉> 
+nil
+clj꞉alura-credit-card-ii.core꞉> 
+nil
+clj꞉alura-credit-card-ii.core꞉> 
+(jt/local-date)
+#object[java.time.LocalDate 0x375990b1 "2021-05-22"]
+clj꞉alura-credit-card-ii.core꞉> 
+; Execution error (ArityException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Wrong number of args (3) passed to: alura-credit-card-ii.logic/new-credit-card
+clj꞉alura-credit-card-ii.core꞉> 
+#'alura-credit-card-ii.core/credit-card-for-luan
+clj꞉alura-credit-card-ii.core꞉> 
+; Evaluating file: db.clj
+#'alura-credit-card-ii.db/assign-credit-card-to-specific-client!
+clj꞉alura-credit-card-ii.db꞉> 
+; Evaluating file: db.clj
+#'alura-credit-card-ii.db/assign-credit-card-to-client!
+clj꞉alura-credit-card-ii.db꞉> 
+#'alura-credit-card-ii.core/credit-card-for-luan
+clj꞉alura-credit-card-ii.core꞉> 
+#'alura-credit-card-ii.core/credit-card-for-bruno
+clj꞉alura-credit-card-ii.core꞉> 
+#'alura-credit-card-ii.core/credit-card-for-rafaela
+clj꞉alura-credit-card-ii.core꞉> 
+; Syntax error compiling at (src/alura_credit_card_ii/core.clj:30:1).
+; Unable to resolve symbol: conn in this context
+clj꞉alura-credit-card-ii.core꞉> 
+#'alura-credit-card-ii.core/conn
+clj꞉alura-credit-card-ii.core꞉> 
+; Syntax error compiling at (src/alura_credit_card_ii/core.clj:30:1).
+; Unable to resolve symbol: luan in this context
+clj꞉alura-credit-card-ii.core꞉> 
+#'alura-credit-card-ii.core/luan
+clj꞉alura-credit-card-ii.core꞉> 
+#'alura-credit-card-ii.core/bruno
+clj꞉alura-credit-card-ii.core꞉> 
+#'alura-credit-card-ii.core/rafaela
+clj꞉alura-credit-card-ii.core꞉> 
+[[{:db/id 17592186045418,
+   :client/id #uuid "d41184da-5ec9-4ebd-a0cc-45f2b404e097",
+   :client/name "Luan",
+   :client/cpf "708.938.913-80",
+   :client/email "luan@jourrapide.com"}]
+ [{:db/id 17592186045419,
+   :client/id #uuid "044b7aeb-ce4c-44a0-8b50-2991088e443d",
+   :client/name "Bruno",
+   :client/cpf "509.567.180-86",
+   :client/email "bruno@jourrapide.com"}]
+ [{:db/id 17592186045420,
+   :client/id #uuid "c6cb5996-1c4d-4a1d-a38a-4f1cde216644",
+   :client/name "Rafaela",
+   :client/cpf "275.047.576-75",
+   :client/email "rafaela@jourrapide.com"}]
+ [{:db/id 17592186045423,
+   :client/id #uuid "3eaffdde-621f-4343-a2ff-281aca8d921c",
+   :client/name "Luan",
+   :client/cpf "708.938.913-80",
+   :client/email "luan@jourrapide.com"}]
+ [{:db/id 17592186045424,
+   :client/id #uuid "37ea9373-ef1b-4b55-b746-9f30185856a0",
+   :client/name "Bruno",
+   :client/cpf "509.567.180-86",
+   :client/email "bruno@jourrapide.com"}]
+ [{:db/id 17592186045425,
+   :client/id #uuid "af35114a-f678-4da4-8065-e4692f2355eb",
+   :client/name "Rafaela",
+   :client/cpf "275.047.576-75",
+   :client/email "rafaela@jourrapide.com"}]]
+clj꞉alura-credit-card-ii.core꞉> 
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-transaction-data Transaction data element must be a List or Map, got :db/add
+clj꞉alura-credit-card-ii.core꞉> 
+; Evaluating file: db.clj
+#'alura-credit-card-ii.db/assign-credit-card-to-client!
+clj꞉alura-credit-card-ii.db꞉> 
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:client/id #uuid "3eea8b55-3418-4de5-a27a-9804a75a36a6"] in datom [[:client/id #uuid "3eea8b55-3418-4de5-a27a-9804a75a36a6"] :client/credit-card [:credit-card/id #:credit-card{:id #uuid "8f4fe4ef-a422-47e8-bb98-1888e0fde69b", :number "379302450924934", :cvv 155, :expiration-date #object[java.time.LocalDate 0x5d7750db "2030-06-10"], :limit 500M}]]
+clj꞉alura-credit-card-ii.core꞉> 
+#'alura-credit-card-ii.core/credit-card-for-luan
+clj꞉alura-credit-card-ii.core꞉> 
+#'alura-credit-card-ii.core/credit-card-for-bruno
+clj꞉alura-credit-card-ii.core꞉> 
+#'alura-credit-card-ii.core/credit-card-for-rafaela
+clj꞉alura-credit-card-ii.core꞉> 
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:client/id #uuid "3eea8b55-3418-4de5-a27a-9804a75a36a6"] in datom [[:client/id #uuid "3eea8b55-3418-4de5-a27a-9804a75a36a6"] :client/credit-card [:credit-card/id #:credit-card{:id #uuid "9a5173d1-6890-411e-b3c5-0f68e1e5793a", :number "379302450924934", :cvv 155, :expiration-date #object[java.time.LocalDate 0x699be887 "2030-06-10"], :limit 500M}]]
+clj꞉alura-credit-card-ii.core꞉> 
+clj꞉alura-credit-card-ii.core꞉> 
+; Evaluating file: db.clj
+#'alura-credit-card-ii.db/assign-credit-card-to-client!
+clj꞉alura-credit-card-ii.db꞉> 
+; Syntax error compiling at (src/alura_credit_card_ii/core.clj:36:1).
+; Unable to resolve symbol: delete-database! in this context
+clj꞉alura-credit-card-ii.core꞉> 
+true
+clj꞉alura-credit-card-ii.core꞉> 
+#<promise$settable_future$reify__6969@5ea72a85: 
+  {:db-before datomic.db.Db@f06b02d5,
+   :db-after datomic.db.Db@dc5ada7d,
+   :tx-data
+   [#datom[13194139534313 50 #inst "2021-05-22T18:13:34.903-00:00" 13194139534313 true] #datom[17592186045418 72 #uuid "73126501-4ef2-44ff-b536-44137fdd80fa" 13194139534313 true] #datom[17592186045418 73 "Luan" 13194139534313 true] #datom[17592186045418 74 "708.938.913-80" 13194139534313 true] #datom[17592186045418 75 "luan@jourrapide.com" 13194139534313 true] #datom[17592186045419 72 #uuid "95cddd46-b6bd-42a5-8d7e-6cb61e146ec2" 13194139534313 true] #datom[17592186045419 73 "Bruno" 13194139534313 true] #datom[17592186045419 74 "509.567.180-86" 13194139534313 true] #datom[17592186045419 75 "bruno@jourrapide.com" 13194139534313 true] #datom[17592186045420 72 #uuid "cce66b68-60c4-4125-9e46-aef0b20ce052" 13194139534313 true] #datom[17592186045420 73 "Rafaela" 13194139534313 true] #datom[17592186045420 74 "275.047.576-75" 13194139534313 true] #datom[17592186045420 75 "rafaela@jourrapide.com" 13194139534313 true]],
+   :tempids
+   {-9223301668109598108 17592186045418, -9223301668109598107 17592186045419, -9223301668109598106 17592186045420}}>
+clj꞉alura-credit-card-ii.core꞉> 
+[[{:db/id 17592186045418,
+   :client/id #uuid "73126501-4ef2-44ff-b536-44137fdd80fa",
+   :client/name "Luan",
+   :client/cpf "708.938.913-80",
+   :client/email "luan@jourrapide.com"}]
+ [{:db/id 17592186045419,
+   :client/id #uuid "95cddd46-b6bd-42a5-8d7e-6cb61e146ec2",
+   :client/name "Bruno",
+   :client/cpf "509.567.180-86",
+   :client/email "bruno@jourrapide.com"}]
+ [{:db/id 17592186045420,
+   :client/id #uuid "cce66b68-60c4-4125-9e46-aef0b20ce052",
+   :client/name "Rafaela",
+   :client/cpf "275.047.576-75",
+   :client/email "rafaela@jourrapide.com"}]]
+clj꞉alura-credit-card-ii.core꞉> 
+#'alura-credit-card-ii.core/credit-card-for-luan
+clj꞉alura-credit-card-ii.core꞉> 
+#'alura-credit-card-ii.core/credit-card-for-bruno
+clj꞉alura-credit-card-ii.core꞉> 
+#'alura-credit-card-ii.core/credit-card-for-rafaela
+clj꞉alura-credit-card-ii.core꞉> 
+; Evaluating file: db.clj
+#'alura-credit-card-ii.db/assign-credit-card-to-client!
+clj꞉alura-credit-card-ii.db꞉> 
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/wrong-type-for-attribute Value 155 is not a valid :bigint for attribute :credit-card/cvv
+clj꞉alura-credit-card-ii.core꞉> 
+(class 155)
+java.lang.Long
+clj꞉alura-credit-card-ii.core꞉> 
+; Evaluating file: db.clj
+#'alura-credit-card-ii.db/assign-credit-card-to-client!
+clj꞉alura-credit-card-ii.db꞉> 
+true
+clj꞉alura-credit-card-ii.core꞉> 
+#'alura-credit-card-ii.core/conn
+clj꞉alura-credit-card-ii.core꞉> 
+#<promise$settable_future$reify__6969@3ae75a63: 
+  {:db-before datomic.db.Db@30602a56,
+   :db-after datomic.db.Db@a3443c51,
+   :tx-data
+   [#datom[13194139534312 50 #inst "2021-05-22T18:18:03.402-00:00" 13194139534312 true] #datom[72 10 :client/id 13194139534312 true] #datom[72 40 56 13194139534312 true] #datom[72 41 35 13194139534312 true] #datom[72 42 38 13194139534312 true] #datom[72 62 "Client entity ID." 13194139534312 true] #datom[73 10 :client/name 13194139534312 true] #datom[73 40 23 13194139534312 true] #datom[73 41 35 13194139534312 true] #datom[73 62 "Name of the client." 13194139534312 true] #datom[74 10 :client/cpf 13194139534312 true] #datom[74 40 23 13194139534312 true] #datom[74 41 35 13194139534312 true] #datom[74 62 "CPF of the client." 13194139534312 true] #datom[75 10 :client/email 13194139534312 true] #datom[75 40 23 13194139534312 true] #datom[75 41 35 13194139534312 true] #datom[75 62 "Email of the client." 13194139534312 true] #datom[76 10 :client/credit-card 13194139534312 true] #datom[76 40 20 13194139534312 true] #datom[76 41 35 13194139534312 true] #datom[76 62 "Credit card reference to entity." 13194139534312 true] #datom[77 10 :credit-card/id 13194139534312 true] #datom[77 40 56 13194139534312 true] #datom[77 41 35 13194139534312 true] #datom[77 62 "Credit Card entity ID." 13194139534312 true] #datom[77 42 38 13194139534312 true] #datom[78 10 :credit-card/number 13194139534312 true] #datom[78 40 23 13194139534312 true] #datom[78 41 35 13194139534312 true] #datom[78 62 "Credit Card number." 13194139534312 true] #datom[79 10 :credit-card/cvv 13194139534312 true] #datom[79 40 22 13194139534312 true] #datom[79 41 35 13194139534312 true] #datom[79 62 "Credit Card CVV code." 13194139534312 true] #datom[80 10 :credit-card/expiration-date 13194139534312 true] #datom[80 40 25 13194139534312 true] #datom[80 41 35 13194139534312 true] #datom[80 62 "Credit Card expiration date." 13194139534312 true] #datom[81 10 :credit-card/limit 13194139534312 true] #datom[81 40 61 13194139534312 true] #datom[81 41 35 13194139534312 true] #datom[81 62 "Credit Card limit." 13194139534312 true] #datom[82 10 :credit-card/purchases 13194139534312 true] #datom[82 40 20 13194139534312 true] #datom[82 41 36 13194139534312 true] #datom[82 62 "Credit card purchases." 13194139534312 true] #datom[83 10 :purchase/id 13194139534312 true] #datom[83 40 56 13194139534312 true] #datom[83 41 35 13194139534312 true] ...],
+   :tempids
+   {-9223301668109598102 74,
+    -9223301668109598101 75,
+    -9223301668109598099 77,
+    -9223301668109598097 79,
+    -9223301668109598092 84,
+    -9223301668109598094 82,
+    -9223301668109598093 83,
+    -9223301668109598100 76,
+    -9223301668109598104 72,
+    -9223301668109598096 80,
+    -9223301668109598091 85,
+    -9223301668109598090 86,
+    -9223301668109598103 73,
+    -9223301668109598095 81,
+    -9223301668109598089 87,
+    -9223301668109598098 78}}>
+clj꞉alura-credit-card-ii.core꞉> 
+#'alura-credit-card-ii.core/rafaela
+clj꞉alura-credit-card-ii.core꞉> 
+[[{:db/id 17592186045418,
+   :client/id #uuid "9ad2cc8e-607d-4062-9183-6c88c63dd8e0",
+   :client/name "Luan",
+   :client/cpf "708.938.913-80",
+   :client/email "luan@jourrapide.com"}]
+ [{:db/id 17592186045419,
+   :client/id #uuid "5eac20ef-7c1d-4bc9-ab57-fdcce7b2bbc2",
+   :client/name "Bruno",
+   :client/cpf "509.567.180-86",
+   :client/email "bruno@jourrapide.com"}]
+ [{:db/id 17592186045420,
+   :client/id #uuid "c9e374c0-ecd9-4ab0-86d0-f79c3f36e0de",
+   :client/name "Rafaela",
+   :client/cpf "275.047.576-75",
+   :client/email "rafaela@jourrapide.com"}]]
+clj꞉alura-credit-card-ii.core꞉> 
+#'alura-credit-card-ii.core/credit-card-for-rafaela
+clj꞉alura-credit-card-ii.core꞉> 
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/wrong-type-for-attribute Value 2030-06-10 is not a valid :inst for attribute :credit-card/expiration-date
+clj꞉alura-credit-card-ii.core꞉> 
+(jt/java-date ((jt/local-date 2030 6 10)))
+; Execution error (ClassCastException) at alura-credit-card-ii.core/eval11867 (form-init278772240830710844.clj:209).
+; class java.time.LocalDate cannot be cast to class clojure.lang.IFn (java.time.LocalDate is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉alura-credit-card-ii.core꞉> 
+(jt/java-date (jt/local-date 2030 6 10))
+; Execution error (ExceptionInfo) at java-time.temporal/instant (temporal.clj:350).
+; Could not convert [#object[java.time.LocalDate 0x7194bffc "2030-06-10"]] to class java.time.Instant!
+clj꞉alura-credit-card-ii.core꞉> 
+(jt/instant (jt/local-date 2030 6 10))
+; clojure.lang.ExceptionInfo: Could not convert [#object[java.time.LocalDate 0x376d867a "2030-06-10"]] to class java.time.Instant!
+(jt/java-date (jt/local-date 2030 6 10))
+clj꞉alura-credit-card-ii.core꞉> 
+(jt/instant)
+#object[java.time.Instant 0xfec3535 "2021-05-22T19:47:14.676016Z"]
+clj꞉alura-credit-card-ii.core꞉> 
+(jt/java-date (jt/instant))
+#inst "2021-05-22T19:47:29.017-00:00"
+clj꞉alura-credit-card-ii.core꞉> 
+(class #inst "2021-05-22T19:47:29.017-00:00"
+  )
+java.util.Date
+clj꞉alura-credit-card-ii.core꞉> 
+#inst "2021-05-22T19:47
+       "
+; Execution error at cider.nrepl.middleware.debug/read-debug-input (debug.clj:241).
+; Unrecognized date/time syntax: 2021-05-22T19:47
+       
+clj꞉alura-credit-card-ii.core꞉> 
+#inst "2021-05-22"
+#inst "2021-05-22T00:00:00.000-00:00"
+clj꞉alura-credit-card-ii.core꞉> 
+true
+clj꞉alura-credit-card-ii.core꞉> 
+[[{:db/id 17592186045418,
+   :client/id #uuid "a48bb1c8-7501-4cd1-9b95-ad2791d873d5",
+   :client/name "Luan",
+   :client/cpf "708.938.913-80",
+   :client/email "luan@jourrapide.com"}]
+ [{:db/id 17592186045419,
+   :client/id #uuid "d07745e2-16ac-477b-863c-774ff62c6598",
+   :client/name "Bruno",
+   :client/cpf "509.567.180-86",
+   :client/email "bruno@jourrapide.com"}]
+ [{:db/id 17592186045420,
+   :client/id #uuid "0eec3162-49aa-4749-9673-3acf85f8f448",
+   :client/name "Rafaela",
+   :client/cpf "275.047.576-75",
+   :client/email "rafaela@jourrapide.com"}]]
+clj꞉alura-credit-card-ii.core꞉> 
+#<promise$settable_future$reify__6969@2a9b4687: 
+  {:db-before datomic.db.Db@ad8ceb65,
+   :db-after datomic.db.Db@c6f3b921,
+   :tx-data
+   [#datom[13194139534317 50 #inst "2021-05-22T19:49:42.316-00:00" 13194139534317 true] #datom[17592186045422 77 #uuid "4fb79a44-5c00-4572-a5c8-884aa4dbefac" 13194139534317 true] #datom[17592186045422 78 "379302450924934" 13194139534317 true] #datom[17592186045422 79 155 13194139534317 true] #datom[17592186045422 80 #inst "2030-06-10T00:00:00.000-00:00" 13194139534317 true] #datom[17592186045422 81 500M 13194139534317 true] #datom[17592186045423 77 #uuid "a17d660e-821d-4ccd-9b56-3e562463319a" 13194139534317 true] #datom[17592186045423 78 "348097759659250" 13194139534317 true] #datom[17592186045423 79 199 13194139534317 true] #datom[17592186045423 80 #inst "2030-06-10T00:00:00.000-00:00" 13194139534317 true] #datom[17592186045423 81 1000M 13194139534317 true] #datom[17592186045424 77 #uuid "d92cfc62-d371-4c6d-ad4f-136a5afad02f" 13194139534317 true] #datom[17592186045424 78 "375784861888366" 13194139534317 true] #datom[17592186045424 79 646 13194139534317 true] #datom[17592186045424 80 #inst "2030-06-10T00:00:00.000-00:00" 13194139534317 true] #datom[17592186045424 81 1500M 13194139534317 true]],
+   :tempids
+   {-9223301668109598065 17592186045422, -9223301668109598064 17592186045423, -9223301668109598063 17592186045424}}>
+clj꞉alura-credit-card-ii.core꞉> 
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:credit-card/id #:credit-card{:id #uuid "4fb79a44-5c00-4572-a5c8-884aa4dbefac", :number "379302450924934", :cvv 155, :expiration-date #inst "2030-06-10T00:00:00.000-00:00", :limit 500M}] in datom [[:client/id #uuid "a48bb1c8-7501-4cd1-9b95-ad2791d873d5"] :client/credit-card [:credit-card/id #:credit-card{:id #uuid "4fb79a44-5c00-4572-a5c8-884aa4dbefac", :number "379302450924934", :cvv 155, :expiration-date #inst "2030-06-10T00:00:00.000-00:00", :limit 500M}]]
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:credit-card/id #:credit-card{:id #uuid "a17d660e-821d-4ccd-9b56-3e562463319a", :number "348097759659250", :cvv 199, :expiration-date #inst "2030-06-10T00:00:00.000-00:00", :limit 1000M}] in datom [[:client/id #uuid "d07745e2-16ac-477b-863c-774ff62c6598"] :client/credit-card [:credit-card/id #:credit-card{:id #uuid "a17d660e-821d-4ccd-9b56-3e562463319a", :number "348097759659250", :cvv 199, :expiration-date #inst "2030-06-10T00:00:00.000-00:00", :limit 1000M}]]
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:credit-card/id #:credit-card{:id #uuid "d92cfc62-d371-4c6d-ad4f-136a5afad02f", :number "375784861888366", :cvv 646, :expiration-date #inst "2030-06-10T00:00:00.000-00:00", :limit 1500M}] in datom [[:client/id #uuid "0eec3162-49aa-4749-9673-3acf85f8f448"] :client/credit-card [:credit-card/id #:credit-card{:id #uuid "d92cfc62-d371-4c6d-ad4f-136a5afad02f", :number "375784861888366", :cvv 646, :expiration-date #inst "2030-06-10T00:00:00.000-00:00", :limit 1500M}]]
+clj꞉alura-credit-card-ii.core꞉> 
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:credit-card/id #:credit-card{:id #uuid "4fb79a44-5c00-4572-a5c8-884aa4dbefac", :number "379302450924934", :cvv 155, :expiration-date #inst "2030-06-10T00:00:00.000-00:00", :limit 500M}] in datom [[:client/id #uuid "a48bb1c8-7501-4cd1-9b95-ad2791d873d5"] :client/credit-card [:credit-card/id #:credit-card{:id #uuid "4fb79a44-5c00-4572-a5c8-884aa4dbefac", :number "379302450924934", :cvv 155, :expiration-date #inst "2030-06-10T00:00:00.000-00:00", :limit 500M}]]
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:credit-card/id #:credit-card{:id #uuid "a17d660e-821d-4ccd-9b56-3e562463319a", :number "348097759659250", :cvv 199, :expiration-date #inst "2030-06-10T00:00:00.000-00:00", :limit 1000M}] in datom [[:client/id #uuid "d07745e2-16ac-477b-863c-774ff62c6598"] :client/credit-card [:credit-card/id #:credit-card{:id #uuid "a17d660e-821d-4ccd-9b56-3e562463319a", :number "348097759659250", :cvv 199, :expiration-date #inst "2030-06-10T00:00:00.000-00:00", :limit 1000M}]]
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:credit-card/id #:credit-card{:id #uuid "d92cfc62-d371-4c6d-ad4f-136a5afad02f", :number "375784861888366", :cvv 646, :expiration-date #inst "2030-06-10T00:00:00.000-00:00", :limit 1500M}] in datom [[:client/id #uuid "0eec3162-49aa-4749-9673-3acf85f8f448"] :client/credit-card [:credit-card/id #:credit-card{:id #uuid "d92cfc62-d371-4c6d-ad4f-136a5afad02f", :number "375784861888366", :cvv 646, :expiration-date #inst "2030-06-10T00:00:00.000-00:00", :limit 1500M}]]
+clj꞉alura-credit-card-ii.core꞉> 
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:credit-card/id #:credit-card{:id #uuid "4fb79a44-5c00-4572-a5c8-884aa4dbefac", :number "379302450924934", :cvv 155, :expiration-date #inst "2030-06-10T00:00:00.000-00:00", :limit 500M}] in datom [[:client/id #uuid "a48bb1c8-7501-4cd1-9b95-ad2791d873d5"] :client/credit-card [:credit-card/id #:credit-card{:id #uuid "4fb79a44-5c00-4572-a5c8-884aa4dbefac", :number "379302450924934", :cvv 155, :expiration-date #inst "2030-06-10T00:00:00.000-00:00", :limit 500M}]]
+clj꞉alura-credit-card-ii.core꞉> 
+; Evaluating file: db.clj
+#'alura-credit-card-ii.db/assign-credit-card-to-client!
+clj꞉alura-credit-card-ii.db꞉> 
+#<promise$settable_future$reify__6969@4421656a: 
+  {:db-before datomic.db.Db@c6f3b921,
+   :db-after datomic.db.Db@b3ea4444,
+   :tx-data
+   [#datom[13194139534321 50 #inst "2021-05-22T19:56:28.719-00:00" 13194139534321 true] #datom[17592186045418 76 17592186045422 13194139534321 true]],
+   :tempids {}}>
+clj꞉alura-credit-card-ii.core꞉> 
+#<promise$settable_future$reify__6969@57c08773: 
+  {:db-before datomic.db.Db@b3ea4444,
+   :db-after datomic.db.Db@cf85b0f9,
+   :tx-data
+   [#datom[13194139534322 50 #inst "2021-05-22T19:56:30.589-00:00" 13194139534322 true] #datom[17592186045419 76 17592186045423 13194139534322 true]],
+   :tempids {}}>
+clj꞉alura-credit-card-ii.core꞉> 
+#<promise$settable_future$reify__6969@d48de33: 
+  {:db-before datomic.db.Db@cf85b0f9,
+   :db-after datomic.db.Db@c7e4040,
+   :tx-data
+   [#datom[13194139534323 50 #inst "2021-05-22T19:56:32.195-00:00" 13194139534323 true] #datom[17592186045420 76 17592186045424 13194139534323 true]],
+   :tempids {}}>
+clj꞉alura-credit-card-ii.core꞉> 
+[[{:db/id 17592186045418,
+   :client/id #uuid "a48bb1c8-7501-4cd1-9b95-ad2791d873d5",
+   :client/name "Luan",
+   :client/cpf "708.938.913-80",
+   :client/email "luan@jourrapide.com",
+   :client/credit-card #:db{:id 17592186045422}}]
+ [{:db/id 17592186045419,
+   :client/id #uuid "d07745e2-16ac-477b-863c-774ff62c6598",
+   :client/name "Bruno",
+   :client/cpf "509.567.180-86",
+   :client/email "bruno@jourrapide.com",
+   :client/credit-card #:db{:id 17592186045423}}]
+ [{:db/id 17592186045420,
+   :client/id #uuid "0eec3162-49aa-4749-9673-3acf85f8f448",
+   :client/name "Rafaela",
+   :client/cpf "275.047.576-75",
+   :client/email "rafaela@jourrapide.com",
+   :client/credit-card #:db{:id 17592186045424}}]]
+clj꞉alura-credit-card-ii.core꞉> 
+; Evaluating file: db.clj
+#'alura-credit-card-ii.db/assign-credit-card-to-client!
+clj꞉alura-credit-card-ii.db꞉> 
+#inst "2021-05-22T19:47:29"
+#inst "2021-05-22T19:47:29.000-00:00"
+clj꞉alura-credit-card-ii.db꞉> 
+; Evaluating file: db.clj
+#'alura-credit-card-ii.db/assign-purchase-to-credit-card!
+clj꞉alura-credit-card-ii.db꞉> 
+true
+clj꞉alura-credit-card-ii.core꞉> 
+#'alura-credit-card-ii.core/phone
+clj꞉alura-credit-card-ii.core꞉> 
+; Execution error (ArityException) at alura-credit-card-ii.core/eval12045 (form-init278772240830710844.clj:48).
+; Wrong number of args (2) passed to: alura-credit-card-ii.db/assign-purchase-to-credit-card!
+; Execution error (ArityException) at alura-credit-card-ii.core/eval12047 (form-init278772240830710844.clj:49).
+; Wrong number of args (2) passed to: alura-credit-card-ii.db/assign-purchase-to-credit-card!
+; Execution error (ArityException) at alura-credit-card-ii.core/eval12049 (form-init278772240830710844.clj:50).
+; Wrong number of args (2) passed to: alura-credit-card-ii.db/assign-purchase-to-credit-card!
+; Execution error (ArityException) at alura-credit-card-ii.core/eval12051 (form-init278772240830710844.clj:51).
+; Wrong number of args (2) passed to: alura-credit-card-ii.db/assign-purchase-to-credit-card!
+; Execution error (ArityException) at alura-credit-card-ii.core/eval12053 (form-init278772240830710844.clj:52).
+; Wrong number of args (2) passed to: alura-credit-card-ii.db/assign-purchase-to-credit-card!
+; Execution error (ArityException) at alura-credit-card-ii.core/eval12055 (form-init278772240830710844.clj:53).
+; Wrong number of args (2) passed to: alura-credit-card-ii.db/assign-purchase-to-credit-card!
+clj꞉alura-credit-card-ii.core꞉> 
+; Execution error (ArityException) at alura-credit-card-ii.core/eval12057 (form-init278772240830710844.clj:48).
+; Wrong number of args (2) passed to: alura-credit-card-ii.db/assign-purchase-to-credit-card!
+clj꞉alura-credit-card-ii.core꞉> 
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:purchase/id #uuid "ff44f87b-a1cc-42d2-bc61-0c400ce1bebd"] in datom [[:credit-card/id #uuid "242b532a-a783-477c-912e-826e95e96369"] :credit-card/purchases [:purchase/id #uuid "ff44f87b-a1cc-42d2-bc61-0c400ce1bebd"]]
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:purchase/id #uuid "7187582f-828c-402e-ae92-81ef78708edf"] in datom [[:credit-card/id #uuid "242b532a-a783-477c-912e-826e95e96369"] :credit-card/purchases [:purchase/id #uuid "7187582f-828c-402e-ae92-81ef78708edf"]]
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:purchase/id #uuid "ff02d995-451a-46cd-80c8-fc2c9ae128cc"] in datom [[:credit-card/id #uuid "86c2abf9-9e1c-4e4f-8929-17164f87cccc"] :credit-card/purchases [:purchase/id #uuid "ff02d995-451a-46cd-80c8-fc2c9ae128cc"]]
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:purchase/id #uuid "fcec031b-2bef-47e0-b2b9-ca3a0eaa4d4c"] in datom [[:credit-card/id #uuid "86c2abf9-9e1c-4e4f-8929-17164f87cccc"] :credit-card/purchases [:purchase/id #uuid "fcec031b-2bef-47e0-b2b9-ca3a0eaa4d4c"]]
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:purchase/id #uuid "ad29d567-fb4a-4c92-b227-845e8bed4127"] in datom [[:credit-card/id #uuid "4b2a1c83-6fb5-4a2d-af6d-de87d5240140"] :credit-card/purchases [:purchase/id #uuid "ad29d567-fb4a-4c92-b227-845e8bed4127"]]
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:purchase/id #uuid "e0ac0cd9-20f5-4f2a-a7b6-f0bb7d83c0fa"] in datom [[:credit-card/id #uuid "4b2a1c83-6fb5-4a2d-af6d-de87d5240140"] :credit-card/purchases [:purchase/id #uuid "e0ac0cd9-20f5-4f2a-a7b6-f0bb7d83c0fa"]]
+clj꞉alura-credit-card-ii.core꞉> 
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:purchase/id #uuid "ff44f87b-a1cc-42d2-bc61-0c400ce1bebd"] in datom [[:credit-card/id #uuid "242b532a-a783-477c-912e-826e95e96369"] :credit-card/purchases [:purchase/id #uuid "ff44f87b-a1cc-42d2-bc61-0c400ce1bebd"]]
+clj꞉alura-credit-card-ii.core꞉> 
+[[{:db/id 17592186045422,
+   :credit-card/id #uuid "242b532a-a783-477c-912e-826e95e96369",
+   :credit-card/number "379302450924934",
+   :credit-card/cvv 155,
+   :credit-card/expiration-date #inst "2030-06-10T00:00:00.000-00:00",
+   :credit-card/limit 2000M}]
+ [{:db/id 17592186045423,
+   :credit-card/id #uuid "86c2abf9-9e1c-4e4f-8929-17164f87cccc",
+   :credit-card/number "348097759659250",
+   :credit-card/cvv 199,
+   :credit-card/expiration-date #inst "2030-06-10T00:00:00.000-00:00",
+   :credit-card/limit 10000M}]
+ [{:db/id 17592186045424,
+   :credit-card/id #uuid "4b2a1c83-6fb5-4a2d-af6d-de87d5240140",
+   :credit-card/number "375784861888366",
+   :credit-card/cvv 646,
+   :credit-card/expiration-date #inst "2030-06-10T00:00:00.000-00:00",
+   :credit-card/limit 2000M}]]
+clj꞉alura-credit-card-ii.core꞉> 
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:purchase/id #uuid "ff44f87b-a1cc-42d2-bc61-0c400ce1bebd"] in datom [[:credit-card/id #uuid "242b532a-a783-477c-912e-826e95e96369"] :credit-card/purchases [:purchase/id #uuid "ff44f87b-a1cc-42d2-bc61-0c400ce1bebd"]]
+clj꞉alura-credit-card-ii.core꞉> 
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:purchase/id #uuid "ff44f87b-a1cc-42d2-bc61-0c400ce1bebd"] in datom [[:credit-card/id #uuid "242b532a-a783-477c-912e-826e95e96369"] :credit-card/purchases [:purchase/id #uuid "ff44f87b-a1cc-42d2-bc61-0c400ce1bebd"]]
+clj꞉alura-credit-card-ii.core꞉> 
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:purchase/id #uuid "ff44f87b-a1cc-42d2-bc61-0c400ce1bebd"] in datom [[:credit-card/id #uuid "242b532a-a783-477c-912e-826e95e96369"] :credit-card/purchases [:purchase/id #uuid "ff44f87b-a1cc-42d2-bc61-0c400ce1bebd"]]
+clj꞉alura-credit-card-ii.core꞉> 
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:purchase/id #uuid "ff44f87b-a1cc-42d2-bc61-0c400ce1bebd"] in datom [[:credit-card/id #uuid "242b532a-a783-477c-912e-826e95e96369"] :credit-card/purchases [:purchase/id #uuid "ff44f87b-a1cc-42d2-bc61-0c400ce1bebd"]]
+clj꞉alura-credit-card-ii.core꞉> 
+; Evaluating file: db.clj
+#'alura-credit-card-ii.db/assign-purchase-to-credit-card!
+clj꞉alura-credit-card-ii.db꞉> 
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:purchase/id #uuid "ff44f87b-a1cc-42d2-bc61-0c400ce1bebd"] in datom [[:credit-card/id #uuid "242b532a-a783-477c-912e-826e95e96369"] :credit-card/purchases [:purchase/id #uuid "ff44f87b-a1cc-42d2-bc61-0c400ce1bebd"]]
+clj꞉alura-credit-card-ii.core꞉> 
+true
+clj꞉alura-credit-card-ii.core꞉> 
+#'alura-credit-card-ii.core/phone
+clj꞉alura-credit-card-ii.core꞉> 
+[[{:db/id 17592186045418,
+   :client/id #uuid "6bb15c59-5596-47cd-bf29-eb19f1444fc8",
+   :client/name "Luan",
+   :client/cpf "708.938.913-80",
+   :client/email "luan@jourrapide.com",
+   :client/credit-card #:db{:id 17592186045422}}]
+ [{:db/id 17592186045419,
+   :client/id #uuid "63d97e1e-1a30-4048-8fed-2dd73f51b737",
+   :client/name "Bruno",
+   :client/cpf "509.567.180-86",
+   :client/email "bruno@jourrapide.com",
+   :client/credit-card #:db{:id 17592186045423}}]
+ [{:db/id 17592186045420,
+   :client/id #uuid "60e76ab8-5b3e-4645-beb4-ca57fdb99a8d",
+   :client/name "Rafaela",
+   :client/cpf "275.047.576-75",
+   :client/email "rafaela@jourrapide.com",
+   :client/credit-card #:db{:id 17592186045424}}]]
+clj꞉alura-credit-card-ii.core꞉> 
+; Execution error (ArityException) at alura-credit-card-ii.core/eval12152 (form-init278772240830710844.clj:47).
+; Wrong number of args (1) passed to: alura-credit-card-ii.db/create-purchases!
+clj꞉alura-credit-card-ii.core꞉> 
+#'alura-credit-card-ii.core/phone
+clj꞉alura-credit-card-ii.core꞉> 
+; Error printing return value (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/wrong-type-for-attribute Value Eletronic is not a valid :inst for attribute :purchase/category
+clj꞉alura-credit-card-ii.core꞉> 
+; Evaluating file: db.clj
+#'alura-credit-card-ii.db/assign-purchase-to-credit-card!
+clj꞉alura-credit-card-ii.db꞉> 
+true
+clj꞉alura-credit-card-ii.core꞉> 
+#<promise$settable_future$reify__6969@1f9c2950: 
+  {:db-before datomic.db.Db@8aa2aed2,
+   :db-after datomic.db.Db@acaf43ac,
+   :tx-data
+   [#datom[13194139534324 50 #inst "2021-05-22T21:03:20.741-00:00" 13194139534324 true] #datom[17592186045429 83 #uuid "ab4ccff9-b25f-48e8-a04b-98933f5ba8a5" 13194139534324 true] #datom[17592186045429 84 #inst "2021-05-22T19:47:29.000-00:00" 13194139534324 true] #datom[17592186045429 85 1500M 13194139534324 true] #datom[17592186045429 86 "Mercado Livre" 13194139534324 true] #datom[17592186045429 87 "Eletronic" 13194139534324 true] #datom[17592186045430 83 #uuid "858a28e4-2403-40aa-bd3b-62ac6d7acff9" 13194139534324 true] #datom[17592186045430 84 #inst "2020-05-22T19:47:29.000-00:00" 13194139534324 true] #datom[17592186045430 85 2300M 13194139534324 true] #datom[17592186045430 86 "Amazon" 13194139534324 true] #datom[17592186045430 87 "Eletronic" 13194139534324 true] #datom[17592186045431 83 #uuid "01ad4fc9-917b-41af-8a2a-692f46393d52" 13194139534324 true] #datom[17592186045431 84 #inst "2021-01-22T19:47:29.000-00:00" 13194139534324 true] #datom[17592186045431 85 100M 13194139534324 true] #datom[17592186045431 86 "Amazon" 13194139534324 true] #datom[17592186045431 87 "Eletronic" 13194139534324 true] #datom[17592186045432 83 #uuid "a2725007-49ed-421f-9045-ff5b786b5583" 13194139534324 true] #datom[17592186045432 84 #inst "2021-01-22T19:47:29.000-00:00" 13194139534324 true] #datom[17592186045432 85 15M 13194139534324 true] #datom[17592186045432 86 "Ifood" 13194139534324 true] #datom[17592186045432 87 "Food" 13194139534324 true] #datom[17592186045433 83 #uuid "dcc62d1b-6957-4202-831f-5719ec44d813" 13194139534324 true] #datom[17592186045433 84 #inst "2021-05-22T19:47:29.000-00:00" 13194139534324 true] #datom[17592186045433 85 130M 13194139534324 true] #datom[17592186045433 86 "Amazon" 13194139534324 true] #datom[17592186045433 87 "Book" 13194139534324 true] #datom[17592186045434 83 #uuid "a8805828-2c62-4d77-8713-70d792cf5cee" 13194139534324 true] #datom[17592186045434 84 #inst "2021-02-22T19:47:29.000-00:00" 13194139534324 true] #datom[17592186045434 85 1500M 13194139534324 true] #datom[17592186045434 86 "Amazon" 13194139534324 true] #datom[17592186045434 87 "Eletronic" 13194139534324 true]],
+   :tempids
+   {-9223301668109597995 17592186045429,
+    -9223301668109597994 17592186045430,
+    -9223301668109597993 17592186045431,
+    -9223301668109597992 17592186045432,
+    -9223301668109597991 17592186045433,
+    -9223301668109597990 17592186045434}}>
+clj꞉alura-credit-card-ii.core꞉> 
+#<promise$settable_future$reify__6969@4871e7cc: 
+  {:db-before datomic.db.Db@df046d0e,
+   :db-after datomic.db.Db@9586c751,
+   :tx-data
+   [#datom[13194139534336 50 #inst "2021-05-22T21:03:38.336-00:00" 13194139534336 true] #datom[17592186045424 82 17592186045430 13194139534336 true]],
+   :tempids {}}>
+clj꞉alura-credit-card-ii.core꞉> 
+[[{:db/id 17592186045422,
+   :credit-card/id #uuid "49f6fb3e-747f-48ba-b687-909178b7a0c7",
+   :credit-card/number "379302450924934",
+   :credit-card/cvv 155,
+   :credit-card/expiration-date #inst "2030-06-10T00:00:00.000-00:00",
+   :credit-card/limit 2000M,
+   :credit-card/purchases [#:db{:id 17592186045429} #:db{:id 17592186045431}]}]
+ [{:db/id 17592186045423,
+   :credit-card/id #uuid "3d440805-a0ff-489e-966b-bd5026531455",
+   :credit-card/number "348097759659250",
+   :credit-card/cvv 199,
+   :credit-card/expiration-date #inst "2030-06-10T00:00:00.000-00:00",
+   :credit-card/limit 10000M,
+   :credit-card/purchases [#:db{:id 17592186045432} #:db{:id 17592186045434}]}]
+ [{:db/id 17592186045424,
+   :credit-card/id #uuid "adc44286-4b0d-45fa-8aed-887a711d8cbf",
+   :credit-card/number "375784861888366",
+   :credit-card/cvv 646,
+   :credit-card/expiration-date #inst "2030-06-10T00:00:00.000-00:00",
+   :credit-card/limit 2000M,
+   :credit-card/purchases [#:db{:id 17592186045430} #:db{:id 17592186045433}]}]]
+clj꞉alura-credit-card-ii.core꞉> 
+; Evaluating file: db.clj
+#'alura-credit-card-ii.db/assign-purchase-to-credit-card!
+clj꞉alura-credit-card-ii.db꞉> 
+[[{:db/id 17592186045429,
+   :purchase/id #uuid "ab4ccff9-b25f-48e8-a04b-98933f5ba8a5",
+   :purchase/date #inst "2021-05-22T19:47:29.000-00:00",
+   :purchase/value 1500M,
+   :purchase/establishment "Mercado Livre",
+   :purchase/category "Eletronic"}]
+ [{:db/id 17592186045430,
+   :purchase/id #uuid "858a28e4-2403-40aa-bd3b-62ac6d7acff9",
+   :purchase/date #inst "2020-05-22T19:47:29.000-00:00",
+   :purchase/value 2300M,
+   :purchase/establishment "Amazon",
+   :purchase/category "Eletronic"}]
+ [{:db/id 17592186045431,
+   :purchase/id #uuid "01ad4fc9-917b-41af-8a2a-692f46393d52",
+   :purchase/date #inst "2021-01-22T19:47:29.000-00:00",
+   :purchase/value 100M,
+   :purchase/establishment "Amazon",
+   :purchase/category "Eletronic"}]
+ [{:db/id 17592186045432,
+   :purchase/id #uuid "a2725007-49ed-421f-9045-ff5b786b5583",
+   :purchase/date #inst "2021-01-22T19:47:29.000-00:00",
+   :purchase/value 15M,
+   :purchase/establishment "Ifood",
+   :purchase/category "Food"}]
+ [{:db/id 17592186045433,
+   :purchase/id #uuid "dcc62d1b-6957-4202-831f-5719ec44d813",
+   :purchase/date #inst "2021-05-22T19:47:29.000-00:00",
+   :purchase/value 130M,
+   :purchase/establishment "Amazon",
+   :purchase/category "Book"}]
+ [{:db/id 17592186045434,
+   :purchase/id #uuid "a8805828-2c62-4d77-8713-70d792cf5cee",
+   :purchase/date #inst "2021-02-22T19:47:29.000-00:00",
+   :purchase/value 1500M,
+   :purchase/establishment "Amazon",
+   :purchase/category "Eletronic"}]]
+clj꞉alura-credit-card-ii.core꞉> 
