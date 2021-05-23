@@ -81,4 +81,4 @@
 ; -> Clients with 0 count of purchases
 (db/clients-without-purchases (d/db conn))
 
-(db/delete-database! db/database-uri)
+;(db/delete-database! db/database-uri)
