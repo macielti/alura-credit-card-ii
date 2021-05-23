@@ -22,9 +22,9 @@
 (db/all-clients (d/db conn))
 
 ; Defining some credit cards
-(def credit-card-for-luan (logic/new-credit-card "379302450924934" 155 #inst "2030-06-10" 2000M))
-(def credit-card-for-bruno (logic/new-credit-card "348097759659250" 199 #inst "2030-06-10" 10000M))
-(def credit-card-for-rafaela (logic/new-credit-card "375784861888366" 646 #inst "2030-06-10" 2000M))
+(def credit-card-for-luan (logic/new-credit-card "379302450924934" 155 #inst "2030-06-10" 20000M))
+(def credit-card-for-bruno (logic/new-credit-card "348097759659250" 199 #inst "2030-06-10" 20000M))
+(def credit-card-for-rafaela (logic/new-credit-card "375784861888366" 646 #inst "2030-06-10" 20000M))
 ; Adding credit card entities to datomic database
 (db/create-credit-cards! conn [credit-card-for-luan credit-card-for-bruno credit-card-for-rafaela])
 
@@ -43,20 +43,42 @@
 (def sandwich (logic/new-purchase #inst "2021-01-22T19:47:29" 15M "Ifood" "Food"))
 (def book (logic/new-purchase #inst "2021-05-22T19:47:29" 130M "Amazon" "Book"))
 (def phone (logic/new-purchase #inst "2021-02-22T19:47:29" 1500M "Amazon" "Eletronic"))
+(def macbook (logic/new-purchase #inst "2021-02-22T19:47:29" 8000M "Amazon" "Eletronic"))
+(def shampoo (logic/new-purchase #inst "2021-02-22T19:47:29" 30M "Amazon" "Cosmetic"))
+(def console (logic/new-purchase #inst "2021-02-22T19:47:29" 3500M "Amazon" "Eletronic"))
 ; Adding purchases to databse
-(db/create-purchases! conn [keyboard tv mouse sandwich book phone])
+(db/create-purchases! conn [keyboard tv mouse sandwich book phone macbook shampoo console])
 
 ; Assign some purchases to the credit-cards
 (db/assign-purchase-to-credit-card! conn keyboard credit-card-for-luan)
 (db/assign-purchase-to-credit-card! conn mouse credit-card-for-luan)
 (db/assign-purchase-to-credit-card! conn sandwich credit-card-for-bruno)
 (db/assign-purchase-to-credit-card! conn phone credit-card-for-bruno)
-(db/assign-purchase-to-credit-card! conn book credit-card-for-rafaela)
-(db/assign-purchase-to-credit-card! conn tv credit-card-for-rafaela)
+(db/assign-purchase-to-credit-card! conn shampoo credit-card-for-luan)
+(db/assign-purchase-to-credit-card! conn macbook credit-card-for-bruno)
 ; List all credit cards to verifi if purchases references was added correctely
 (db/all-credit-cards (d/db conn))
 
 ; -> Listing all purchases
 (db/all-purchases (d/db conn))
 
-; (db/delete-database! db/database-uri)
+; -> Listing purchases by CPF
+(db/query-all-purchases-by-cpf (d/db conn) "708.938.913-80")
+(db/query-all-purchases-by-cpf (d/db conn) "509.567.180-86")
+(db/query-all-purchases-by-cpf (d/db conn) "275.047.576-75")
+
+; -> Sumarise expenses by category
+(db/purchase-sumary-by-category (d/db conn) "708.938.913-80")
+(db/purchase-sumary-by-category (d/db conn) "509.567.180-86")
+(db/purchase-sumary-by-category (d/db conn) "275.047.576-75")
+
+; -> Client with the max count of purchases
+(db/client-with-max-number-of-purchases (d/db conn))
+
+; -> The client with the max purchase value
+(db/client-with-highest-value-purchase (d/db conn))
+
+; -> Clients with 0 count of purchases
+(db/clients-without-purchases (d/db conn))
+
+(db/delete-database! db/database-uri)

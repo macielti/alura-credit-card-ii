@@ -1,5 +1,8 @@
 (ns alura-credit-card-ii.db
-  (:require [datomic.api :as d]))
+  (:use [clojure pprint])
+  (:require [datomic.api :as d]
+            [java-time :as jt])
+  (:import java.util.Calendar))
 
 (def database-uri "datomic:dev://localhost:4334/credit")
 
@@ -114,7 +117,7 @@
   (d/q '[:find (pull ?credit-card [*])
          :where [?credit-card :credit-card/id]] db))
 
-(defn all-purchases 
+(defn all-purchases
   [db]
   (d/q '[:find (pull ?purchase [*])
          :where [?purchase :purchase/id]] db))
@@ -132,3 +135,81 @@
   (d/transact conn [[:db/add [:credit-card/id (:credit-card/id credit-card)]
                      :credit-card/purchases
                      [:purchase/id (:purchase/id purchase)]]]))
+
+(defn query-all-purchases-by-cpf
+  "Receives a snapshot db and a CPF and returns a list of purchases for the
+   specific client."
+  [db cpf]
+  (->> (d/q '[:find (pull ?client [{:client/credit-card [{:credit-card/purchases [*]}]}])
+              :in $ ?cpf
+              :where [?client :client/cpf ?cpf]] db cpf)
+       ffirst
+       :client/credit-card
+       :credit-card/purchases))
+
+(defn group-purchases-by-category
+  [purchases]
+  (group-by :purchase/category purchases))
+
+(defn total-spent
+  [purchases]
+  (->> purchases
+       (map :purchase/value)
+       (reduce +)))
+
+(defn category-sumary
+  [[category purchases]]
+  {:category/name category
+   :purchases/total-spent (total-spent purchases)})
+
+(defn purchase-sumary-by-category
+  [db cpf]
+  (let [purchases (query-all-purchases-by-cpf db cpf)]
+    (->> purchases
+         group-purchases-by-category
+         (map category-sumary))))
+
+(defn client-with-max-number-of-purchases
+  [db]
+  (first (d/q '[:find ?name (count ?purchases)
+                :keys client/name client/number-of-purchases
+         :where [?credit-card :credit-card/purchases ?purchases]
+                [?client :client/credit-card ?credit-card]
+                [?client :client/name ?name]] db)))
+
+(defn client-with-highest-value-purchase
+  [db]
+  (let [results (d/q '[:find (pull ?purchase [:purchase/id {:credit-card/_purchases [:credit-card/id {:client/_credit-card [:client/name]}]}]) (max ?value)
+                       :keys client value
+                       :where [?purchase :purchase/value ?value]] db)]
+    (some->> results
+             (sort-by :value)
+             last)))
+
+(defn clients-without-purchases
+  [db]
+  (d/q '[:find (pull ?credit-card [:credit-card/id {:client/_credit-card [:client/name]}])
+         :where [?credit-card :credit-card/number]
+         (not [?credit-card :credit-card/purchases])] db))
+
+;; (defn get-month-from-instant
+;;   [instant]
+;;   (let [calendar (Calendar/getInstance)]
+;;     (doto calendar
+;;       (.setTime instant)
+;;       (.get Calendar/MONTH))))
+
+;; (defn purchases-in-the-month
+;;   "Get all purchases made in the same month passed by date"
+;;   [purchases, date]
+;;   (let [purchase-month (.getMonth date)
+;;         purchase-year (.getYear date)
+;;         purchases-in-the-same-month (filter #(and (= (jt/month (:date %)) purchase-month) (= (jt/year (:date %)) purchase-year)) purchases)]
+;;     purchases-in-the-same-month))
+
+;; (defn month-billing
+;;   [db cpf date]
+;;   (let [all-purchases (query-all-purchases-by-cpf db cpf)
+;;         purchases]))
+
+;; (get-month-from-instant #inst "2021")
